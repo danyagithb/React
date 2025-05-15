@@ -1,16 +1,21 @@
 import './App.css'
 
+const coursesTitleArray: string[] = [
+  'JavaScript Complex',
+  'Java Complex',
+  'Python Complex',
+  'QA Complex',
+  'Fullstack',
+  'Frontend'
+];
+
 function App() {
   return (
     <>
       <ul>
-        <li>ksdgklkg</li>
-        <li>ksdgklkg</li>
-        <li>ksdgklkg</li>
-        <li>ksdgklkg</li>
-        <h1 className="text-3xl font-bold underline">
-          Hello world!
-        </h1>
+        {
+          coursesTitleArray.map((value, index) => <li key={index}>{value}</li>)
+        }
       </ul>
     </>
   )
