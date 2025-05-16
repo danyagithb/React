@@ -1,0 +1,8 @@
+li {
+    background-color: chartreuse;
+    border-radius: 10px;
+    border: 2px solid #366a03;
+    padding: 15px;
+    margin: 20px;
+    text-align: center;
+}
