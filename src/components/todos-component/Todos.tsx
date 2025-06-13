@@ -1,13 +1,19 @@
 import './Todos.css'
 import {useEffect, useState} from "react";
 import type {TodoModel} from "../../models/todo-model.ts";
+import {loadTodos} from "../../service/api.service.ts";
+import {Todo} from "../todo-component/Todo.tsx";
 
 export const Todos = () => {
-    const [todos, setTodos] = useState<TodoModel[]>()
+    const [todos, setTodos] = useState<TodoModel[]>([]);
     useEffect(() => {
-        // loadTodos.then()
+        loadTodos().then(value => setTodos(value))
     }, [])
     return (
-        <div></div>
+        <div>
+            {
+                todos.map(todo => <Todo todo={todo} key={todo.id}/>)
+            }
+        </div>
     );
 };
