@@ -3,7 +3,7 @@ import type {IPost} from "../../models/model-post.ts";
 
 type PropsType = { post: IPost}
 
-export const PostComponent:FC<PropsType> = ({post: {id, title, body}}) => {
+export const PostComponent: FC<PropsType> = ({post: {id, title, body}}) => {
     return (
         <div>
             <div>ID: {id}</div>
@@ -12,3 +12,9 @@ export const PostComponent:FC<PropsType> = ({post: {id, title, body}}) => {
         </div>
     );
 };
+
+// export const Todo: FC<PropsType> = ({todo: {title, id, completed}}) => {
+//     return (
+//         <div>{id} {title} {completed.toString()}</div>
+//     );
+// };
