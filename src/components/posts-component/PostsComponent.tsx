@@ -1,11 +1,11 @@
 import {useEffect, useState} from "react";
-import type {ITask} from "../../models/model-task.ts";
+import type {IPost} from "../../models/model-post.ts";
 
 
-export const TasksComponent = () => {
-    const [tasks, setTasks] = useState<ITask[]>([]);
+export const PostsComponent = () => {
+    const [posts, setPosts] = useState<IPost[]>([]);
     useEffect(() => {
-        loadTask().then(value => setTasks(value))
+        loadPosts().then(value => setPosts(value))
     }, []);
     return (
         <div>

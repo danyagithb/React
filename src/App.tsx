@@ -1,10 +1,10 @@
 import './App.css'
-import {TasksComponent} from "./components/tasks-component/TasksComponent.tsx";
+import {PostsComponent} from "./components/posts-component/PostsComponent.tsx";
 
 function App() {
   return (
     <div>
-      <TasksComponent/>
+      <PostsComponent/>
     </div>
   )
 }
