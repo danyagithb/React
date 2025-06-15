@@ -1,3 +1,4 @@
+import './Posts.css'
 import {useEffect, useState} from "react";
 import type {IPost} from "../../models/model-post.ts";
 import {loadPosts} from "../../service/api.service.ts";
@@ -10,7 +11,7 @@ export const PostsComponent = () => {
         loadPosts().then(value => setPosts(value))
     }, []);
     return (
-        <div>
+        <div className={'posts'}>
             {
                 posts.map(post => <PostComponent post={post} key={post.id}/>)
             }
