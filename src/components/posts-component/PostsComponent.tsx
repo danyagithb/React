@@ -1,5 +1,7 @@
 import {useEffect, useState} from "react";
 import type {IPost} from "../../models/model-post.ts";
+import {loadPosts} from "../../service/api.service.ts";
+import {PostComponent} from "../post-component/PostComponent.tsx";
 
 
 export const PostsComponent = () => {
@@ -9,21 +11,9 @@ export const PostsComponent = () => {
     }, []);
     return (
         <div>
-
+            {
+                posts.map(post => <PostComponent post={post} key={post.id}/>)
+            }
         </div>
     );
 };
-
-// export const Todos = () => {
-//     const [todos, setTodos] = useState<TodoModel[]>([]);
-//     useEffect(() => {
-//         loadTodos().then(value => setTodos(value))
-//     }, [])
-//     return (
-//         <div>
-//             {
-//                 todos.map(todo => <Todo todo={todo} key={todo.id}/>)
-//             }
-//         </div>
-//     );
-// };
