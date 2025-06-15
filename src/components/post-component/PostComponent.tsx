@@ -12,9 +12,3 @@ export const PostComponent: FC<PropsType> = ({post: {id, title, body}}) => {
         </div>
     );
 };
-
-// export const Todo: FC<PropsType> = ({todo: {title, id, completed}}) => {
-//     return (
-//         <div>{id} {title} {completed.toString()}</div>
-//     );
-// };
