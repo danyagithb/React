@@ -1,18 +1,11 @@
 import './App.css'
+import {CommentsComponent} from "./components/comments-component/CommentsComponent.tsx";
 
 function App() {
   return (
-    <>
-      <ul>
-        <li>ksdgklkg</li>
-        <li>ksdgklkg</li>
-        <li>ksdgklkg</li>
-        <li>ksdgklkg</li>
-        <h1 className="text-3xl font-bold underline">
-          Hello world!
-        </h1>
-      </ul>
-    </>
+    <div>
+      <CommentsComponent/>
+    </div>
   )
 }
 

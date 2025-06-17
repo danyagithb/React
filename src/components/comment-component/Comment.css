@@ -1,0 +1,22 @@
+.comment-item {
+    background-color: #f88a8a;
+    padding: 10px;
+    border: 2px solid #711414;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.comment-main {
+    background-color: #711414;
+    color: #bdbdbd;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+}
