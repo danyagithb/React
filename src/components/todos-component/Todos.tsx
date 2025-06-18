@@ -12,7 +12,7 @@ export const Todos = () => {
     return (
         <div>
             {
-                todos.map(todo => <Todo todo={todo} key={todo.id}/>)
+                todos.map(todo => <Todo todoItem={todo} key={todo.id}/>)
             }
         </div>
     );
