@@ -20,3 +20,12 @@
     border: 1px solid black;
     border-radius: 5px;
 }
+
+.user-box {
+    background-color: #fa6a6a;
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid black;
+    padding: 10px;
+    margin-top: 10px;
+}

@@ -1,7 +1,13 @@
-export interface IComment {
-  postId: number;
+export interface IUser {
   id: number;
-  name: string;
-  email: string;
+  username: string;
+  fullName: string;
+}
+
+export interface IComment {
+  id: number;
   body: string;
+  postId: number;
+  likes: number;
+  user: IUser;
 }
