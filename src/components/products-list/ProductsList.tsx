@@ -1,3 +1,4 @@
+import './ProductsList.css'
 import {useEffect, useState} from "react";
 import type {IProduct} from "../../models/ModelProduct.ts";
 import {loadProducts} from "../../service/api.service.ts";
@@ -9,7 +10,7 @@ export const ProductsList = () => {
         loadProducts().then(value => setCards(value))
     }, []);
     return (
-        <div>
+        <div className={'card-list'}>
             {
                 cards.map(card => <ProductCard card={card} key={card.id}/>)
             }

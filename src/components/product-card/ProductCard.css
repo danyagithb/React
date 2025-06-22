@@ -1,0 +1,39 @@
+.product-card {
+    position: relative;
+    border: 2px solid #0f3c04;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgb(184, 230, 170);
+    z-index: 1;
+    background-color: #ffffff;
+}
+
+.product-card:hover {
+    z-index: 10;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom: 2px solid transparent;
+
+}
+
+.info-hover {
+    position: absolute;
+    top: 100%;
+    left: -1px;
+    display: none;
+    transition: all 0.3s ease;
+    border: 2px solid #0f3c04;
+    border-top: none;
+}
+
+.product-card,
+.info-hover {
+    width: 300px;
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+.product-card:hover .info-hover {
+    background-color: white;
+    display: block;
+    z-index: 10;
+}

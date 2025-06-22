@@ -1,3 +1,4 @@
+import './ProductImage.css'
 import type {FC} from "react";
 
 type PropsType = {
@@ -7,6 +8,6 @@ type PropsType = {
 
 export const ProductImage: FC<PropsType> = ({src, alt}) => {
     return (
-        <img src={src} alt={alt}/>
+        <img src={src} alt={alt} className={'card-image'}/>
     );
 };
