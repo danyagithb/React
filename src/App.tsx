@@ -1,18 +1,11 @@
 import './App.css'
+import {ProductsList} from "./components/products-list/ProductsList.tsx";
 
 function App() {
   return (
-    <>
-      <ul>
-        <li>ksdgklkg</li>
-        <li>ksdgklkg</li>
-        <li>ksdgklkg</li>
-        <li>ksdgklkg</li>
-        <h1 className="text-3xl font-bold underline">
-          Hello world!
-        </h1>
-      </ul>
-    </>
+    <div>
+      <ProductsList/>
+    </div>
   )
 }
 
