@@ -4,9 +4,12 @@
     padding-bottom: 150px;
     width: 100%;
 
+    /*display: grid;*/
+    /*grid-template-columns: repeat(3, 1fr);*/
+    /*row-gap: 30px;*/
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
     flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 50px;
+    overflow: hidden;
 }

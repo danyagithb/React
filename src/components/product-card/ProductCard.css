@@ -1,39 +1,106 @@
-.product-card {
+.product-card-wrapper {
     position: relative;
+    width: 330px;
+    min-height: 440px;
+}
+
+.product-card {
+    max-width: 330px;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
     border: 2px solid #0f3c04;
     border-radius: 8px;
-    box-shadow: 0 2px 6px rgb(184, 230, 170);
+    box-shadow: 0 2px 6px rgb(72, 78, 71);
     z-index: 1;
-    background-color: #ffffff;
+    background-color: #fff8f8;
+    padding: 15px;
+
+    transition: all .3s linear;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    will-change: transform;
 }
+
+.description-block {
+    margin-bottom: 10px;
+    width: 280px;
+
+    font-size: 14px;
+}
+
+.card-title {
+    font-size: 16px;
+}
+
+/*----------------------Back-Card---------------------*/
+
+.back-card {
+    opacity: 0;
+    transform: translateY(40px) translateX(20px);
+    max-height: 0;
+    overflow: hidden;
+    pointer-events: none;
+    transition: all linear .3s;
+    padding-left: 60px;
+
+    height: 100%;
+
+}
+
+.reviews-button {
+    /*position: absolute;*/
+    /*bottom: 10px;*/
+    /*left: 10px;*/
+
+
+}
+
+/*----------------Price-------------------*/
+
+.card-price-box {
+    display: flex;
+    justify-content: start;
+    gap: 15px;
+}
+
+.card-old-price {
+    text-decoration: line-through;
+    color: #505050;
+}
+
+/*-------------------Card Hover--------------------------*/
 
 .product-card:hover {
     z-index: 10;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-    border-bottom: 2px solid transparent;
 
+    max-width: 850px;
 }
 
-.info-hover {
-    position: absolute;
-    top: 100%;
-    left: -1px;
-    display: none;
-    transition: all 0.3s ease;
-    border: 2px solid #0f3c04;
-    border-top: none;
+.product-card:hover .back-card {
+    opacity: 1;
+    transform: translateY(0) translateX(0);
+    max-height: 500px;
+    pointer-events: auto;
 }
 
-.product-card,
-.info-hover {
-    width: 300px;
-    box-sizing: border-box;
-    padding: 15px;
+.product-card:hover .front-card {
+    width: 250px;
 }
 
-.product-card:hover .info-hover {
-    background-color: white;
-    display: block;
-    z-index: 10;
+/*-----------------------------Wrapper----------------*/
+
+.product-card-wrapper:nth-child(3n+1) .product-card:hover {
+    transform: translateX(20px);
+}
+.product-card-wrapper:nth-child(3n+2) .product-card:hover {
+    transform: translateX(-200px);
+}
+.product-card-wrapper:nth-child(3n+3) .product-card:hover {
+    transform: translateX(-460px);
 }

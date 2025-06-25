@@ -28,18 +28,25 @@ export const ProductCard: FC<PropsType> = ({card}) => {
     } else {textButtonReviews = 'Reviews'}
 
     return (
-        <div className={'product-card'}>
-            <p>{card.title}</p>
-            <ProductImage src={card.thumbnail} alt={card.title}/>
-            <ul>
-                <li>{card.price}</li>
-                <li>{oldPrice}</li>
-            </ul>
-            <div className={'info-hover'}>
-                <ProductInfo product={card} />
-                <button className="btn" onClick={reviewsClick}>
-                    {textButtonReviews}
-                </button>
+        <div className={'product-card-wrapper'}>
+            <div className={'product-card'}>
+                <div className={'front-card'}>
+                    <p className={'card-title'}>{card.title}</p>
+                    <ProductImage src={card.thumbnail} alt={card.title}/>
+                    <div className={'description-block'}>
+                        <p>{card.description}</p>
+                    </div>
+                    <ul className={'card-price-box'}>
+                        <li className={'card-price'}>{card.price}$</li>
+                        <li className={'card-old-price'}>{oldPrice}$</li>
+                    </ul>
+                </div>
+                <div className={'back-card'}>
+                    <ProductInfo product={card}/>
+                    <button className="reviews-button" onClick={reviewsClick}>
+                        {textButtonReviews}
+                    </button>
+                </div>
             </div>
         </div>
     );
