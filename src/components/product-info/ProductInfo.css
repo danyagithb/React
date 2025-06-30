@@ -6,7 +6,8 @@
 }
 
 .about-block {
-    width: 300px;
+    min-width: 250px;
+    overflow: hidden;
 }
 
 .about-block::before {
@@ -21,13 +22,14 @@
 }
 
 .secondary-block {
-    width: 200px;
+    min-width: 220px;
     display: flex;
     flex-direction: column;
     align-items: start;
     justify-content: start;
     gap: 10px;
     letter-spacing: 1px;
+    overflow: hidden;
 }
 
 .block-title {

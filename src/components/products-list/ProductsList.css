@@ -4,9 +4,6 @@
     padding-bottom: 150px;
     width: 100%;
 
-    /*display: grid;*/
-    /*grid-template-columns: repeat(3, 1fr);*/
-    /*row-gap: 30px;*/
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;

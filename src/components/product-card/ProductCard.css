@@ -1,7 +1,7 @@
 .product-card-wrapper {
     position: relative;
     width: 330px;
-    min-height: 440px;
+    min-height: 450px;
 }
 
 .product-card {
@@ -19,7 +19,7 @@
     background-color: #fff8f8;
     padding: 15px;
 
-    transition: all .3s linear;
+    transition: all .4s linear;
 
     display: flex;
     justify-content: space-between;
@@ -30,8 +30,15 @@
 .description-block {
     margin-bottom: 10px;
     width: 280px;
-
     font-size: 14px;
+}
+
+.front-card {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-evenly;
+    height: 100%;
 }
 
 .card-title {
@@ -46,19 +53,28 @@
     max-height: 0;
     overflow: hidden;
     pointer-events: none;
-    transition: all linear .3s;
+    transition: all linear .4s;
     padding-left: 60px;
-
     height: 100%;
-
 }
 
 .reviews-button {
-    /*position: absolute;*/
-    /*bottom: 10px;*/
-    /*left: 10px;*/
+    min-width: 160px;
+    background-color: #caff92;
+    border: 2px solid #0f3c04;
+    border-radius: 8px;
+    transition: all .3s linear;
+    padding-block: 5px;
+    padding-inline: 40px;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: .7px;
+}
 
-
+.reviews-button:hover {
+    background-color: #8fcd54;
+    border-color: #092202;
 }
 
 /*----------------Price-------------------*/
@@ -78,8 +94,7 @@
 
 .product-card:hover {
     z-index: 10;
-
-    max-width: 850px;
+    max-width: 810px;
 }
 
 .product-card:hover .back-card {
