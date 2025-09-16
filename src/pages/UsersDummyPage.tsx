@@ -1,7 +1,9 @@
+import UsersComponentDummy from "../components/users/UsersComponentDummy.tsx";
+
 const UsersDummyPage = () => {
     return (
         <div>
-            Users Page Dummy
+            <UsersComponentDummy/>
         </div>
     );
 };

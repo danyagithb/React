@@ -1,7 +1,7 @@
 const UsersComponentPlaceholder = () => {
     return (
         <div>
-
+            user
         </div>
     );
 };
