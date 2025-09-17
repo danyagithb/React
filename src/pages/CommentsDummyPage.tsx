@@ -1,7 +1,9 @@
+import CommentsComponentDummy from "../components/comments/CommentsComponentDummy.tsx";
+
 const CommentsDummyPage = () => {
     return (
         <div>
-            Comments Dummy Page
+            <CommentsComponentDummy/>
         </div>
     );
 };
