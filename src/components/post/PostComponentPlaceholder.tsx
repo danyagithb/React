@@ -1,5 +1,7 @@
+import '../../styles/General.css';
 import type {IPostPlaceholder} from "../../models/post/IPostPlaceholder.ts";
 import type {FC} from "react";
+import {MainFunctions} from "../../functions/MainFunctions.tsx";
 
 type PostPropsType = {
     post: IPostPlaceholder
@@ -7,9 +9,9 @@ type PostPropsType = {
 
 const PostComponentPlaceholder: FC<PostPropsType> = ({post}) => {
     return (
-        <div>
+        <div className={'block-item'}>
             {
-                post.title
+                MainFunctions.showValue<IPostPlaceholder>(post)
             }
         </div>
     );

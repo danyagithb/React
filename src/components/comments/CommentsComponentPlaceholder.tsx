@@ -1,3 +1,4 @@
+import '../../styles/General.css';
 import {useEffect, useState} from "react";
 import type {ICommentPlaceholder} from "../../models/comment/ICommentPlaceholder.ts";
 import {getAllPlaceholder} from "../../services/placeholder.service.tsx";
@@ -11,10 +12,12 @@ const CommentsComponentPlaceholder = () => {
             .then((comments) => setComments(comments))
     }, []);
     return (
-        <div>
-            {
-                comments.map(comment => <CommentComponentPlaceholder key={comment.id} comment={comment}/>)
-            }
+        <div className={'container'}>
+            <div className={'block'}>
+                {
+                    comments.map(comment => <CommentComponentPlaceholder key={comment.id} comment={comment}/>)
+                }
+            </div>
         </div>
     );
 };

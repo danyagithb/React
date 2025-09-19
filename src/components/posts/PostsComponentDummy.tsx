@@ -1,3 +1,4 @@
+import '../../styles/General.css';
 import type {IPostDummy} from "../../models/post/IPostDummy.ts";
 import {useEffect, useState} from "react";
 import {getAllDummy} from "../../services/dummy.service.tsx";
@@ -12,10 +13,12 @@ const PostsComponentDummy = () => {
             .then(({posts}) => setPosts(posts))
     }, []);
     return (
-        <div>
-            {
-                posts.map((post: IPostDummy) => <PostComponentDummy key={post.id} post={post}/>)
-            }
+        <div className={'container'}>
+            <div className={'block'}>
+                {
+                    posts.map((post: IPostDummy) => <PostComponentDummy key={post.id} post={post}/>)
+                }
+            </div>
         </div>
     );
 };

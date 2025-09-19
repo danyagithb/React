@@ -1,3 +1,4 @@
+import '../../styles/General.css';
 import type {FC} from "react";
 import type {ICommentDummy} from "../../models/comment/ICommentDummy.ts";
 import {MainFunctions} from "../../functions/MainFunctions.tsx";
@@ -8,7 +9,7 @@ type CommentPropType= {
 
 const CommentComponentDummy: FC<CommentPropType> = ({comment}) => {
     return (
-        <div>
+        <div className={'block-item'}>
             {
                 MainFunctions.showValue<ICommentDummy>(comment)
             }

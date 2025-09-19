@@ -1,3 +1,4 @@
+import '../../styles/General.css';
 import {useEffect, useState} from "react";
 import {getAllDummy} from "../../services/dummy.service.tsx";
 import type {BaseResponseModelType} from "../../models/BaseResponseModelType.ts";
@@ -12,10 +13,12 @@ const UsersComponentDummy = () => {
             .then(({users}) => setUsers(users))
     }, []);
     return (
-        <div>
-            {
-                users.map((user: IUserDummy) => <UserComponentDummy key={user.id} user={user}/>)
-            }
+        <div className={'container'}>
+            <div className={'block'}>
+                {
+                    users.map((user: IUserDummy) => <UserComponentDummy key={user.id} user={user}/>)
+                }
+            </div>
         </div>
     );
 };

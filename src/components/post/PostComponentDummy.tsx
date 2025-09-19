@@ -1,5 +1,7 @@
+import '../../styles/General.css';
 import type {FC} from "react";
 import type {IPostDummy} from "../../models/post/IPostDummy.ts";
+import {MainFunctions} from "../../functions/MainFunctions.tsx";
 
 type PostPropsType = {
     post: IPostDummy
@@ -7,9 +9,9 @@ type PostPropsType = {
 
 const PostComponentDummy: FC<PostPropsType> = ({post}) => {
     return (
-        <div>
+        <div className={'block-item'}>
             {
-                post.title
+                MainFunctions.showValue<IPostDummy>(post)
             }
         </div>
     );

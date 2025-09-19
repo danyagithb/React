@@ -2,9 +2,9 @@ import CommentsComponentPlaceholder from "../components/comments/CommentsCompone
 
 const CommentsJsonPage = () => {
     return (
-        <div>
+        <>
             <CommentsComponentPlaceholder/>
-        </div>
+        </>
     );
 };
 

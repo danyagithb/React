@@ -1,3 +1,4 @@
+import '../../styles/General.css';
 import type {IUserPlaceholder} from "../../models/user/IUserPlaceholder.ts";
 import {useEffect, useState} from "react";
 import {getAllPlaceholder} from "../../services/placeholder.service.tsx";
@@ -12,10 +13,12 @@ const UsersComponentPlaceholder = () => {
     }, []);
 
     return (
-        <div>
-            {
-                users.map(user => <UserComponentPlaceholder key={user.id} user={user}/>)
-            }
+        <div className={'container'}>
+            <div className={'block'}>
+                {
+                    users.map(user => <UserComponentPlaceholder key={user.id} user={user}/>)
+                }
+            </div>
         </div>
     );
 };

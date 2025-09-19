@@ -2,9 +2,9 @@ import CommentsComponentDummy from "../components/comments/CommentsComponentDumm
 
 const CommentsDummyPage = () => {
     return (
-        <div>
+        <>
             <CommentsComponentDummy/>
-        </div>
+        </>
     );
 };
 

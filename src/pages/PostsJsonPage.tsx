@@ -2,9 +2,9 @@ import PostsComponentPlaceholder from "../components/posts/PostsComponentPlaceho
 
 const PostsJsonPage = () => {
     return (
-        <div>
+        <>
             <PostsComponentPlaceholder/>
-        </div>
+        </>
     );
 };
 

@@ -1,5 +1,7 @@
+import '../../styles/General.css';
 import type {FC} from "react";
 import type {ICommentPlaceholder} from "../../models/comment/ICommentPlaceholder.ts";
+import {MainFunctions} from "../../functions/MainFunctions.tsx";
 
 type CommentPropsType = {
     comment: ICommentPlaceholder
@@ -7,9 +9,9 @@ type CommentPropsType = {
 
 const CommentComponentPlaceholder: FC<CommentPropsType> = ({comment}) => {
     return (
-        <div>
+        <div className={'block-item'}>
             {
-                comment.email
+                MainFunctions.showValue<ICommentPlaceholder>(comment)
             }
         </div>
     );

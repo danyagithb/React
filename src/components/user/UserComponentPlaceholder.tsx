@@ -1,5 +1,7 @@
+import '../../styles/General.css';
 import type {IUserPlaceholder} from "../../models/user/IUserPlaceholder.ts";
 import type {FC} from "react";
+import {MainFunctions} from "../../functions/MainFunctions.tsx";
 
 type UserPropsType = {
     user: IUserPlaceholder
@@ -7,9 +9,9 @@ type UserPropsType = {
 
 const UserComponentPlaceholder: FC<UserPropsType> = ({user}) => {
     return (
-        <div>
+        <div className={'block-item'}>
             {
-                user.name
+                MainFunctions.showValue<IUserPlaceholder>(user)
             }
         </div>
     );

@@ -1,0 +1,16 @@
+.container {
+    width: 100%;
+    padding: 30px;
+}
+
+.block {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.block-item {
+    background-color: #c4e5f3;
+    border-radius: 10px;
+    padding: 10px;
+}

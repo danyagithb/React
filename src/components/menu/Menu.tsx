@@ -1,9 +1,10 @@
+import './Menu.css'
 import {Link} from "react-router";
 
 const Menu = () => {
     return (
         <div>
-            <ul>
+            <ul className={'menu-block'}>
                 <li><Link to={''}>Home</Link></li>
                 <li><Link to={'users/jsonplaceholder'}>Users jsonplaceholder</Link></li>
                 <li><Link to={'users/dummyjson'}>Users dummyjson</Link></li>

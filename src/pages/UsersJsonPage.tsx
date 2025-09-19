@@ -2,9 +2,9 @@ import UsersComponentPlaceholder from "../components/users/UsersComponentPlaceho
 
 const UsersJsonPage = () => {
     return (
-        <div>
+        <>
             <UsersComponentPlaceholder/>
-        </div>
+        </>
     );
 };
 

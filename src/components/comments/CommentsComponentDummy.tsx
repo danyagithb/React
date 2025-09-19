@@ -1,3 +1,4 @@
+import '../../styles/General.css';
 import {useEffect, useState} from "react";
 import type {ICommentDummy} from "../../models/comment/ICommentDummy.ts";
 import {getAllDummy} from "../../services/dummy.service.tsx";
@@ -12,10 +13,12 @@ const CommentsComponentDummy = () => {
             .then(({comments}) => setComments(comments))
     }, []);
     return (
-        <div>
-            {
-                comments.map((comment: ICommentDummy) => <CommentComponentDummy key={comment.id} comment={comment}/>)
-            }
+        <div className={'container'}>
+            <div className={'block'}>
+                {
+                    comments.map((comment: ICommentDummy) => <CommentComponentDummy key={comment.id} comment={comment}/>)
+                }
+            </div>
         </div>
     );
 };
