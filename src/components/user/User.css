@@ -1,0 +1,13 @@
+.user {
+    background-color: #bcccff;
+    width: 320px;
+    height: 150px;
+    border-radius: 8px;
+    padding: 8px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 4px;
+}
