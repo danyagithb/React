@@ -1,4 +1,4 @@
-import PostsComponentDummy from "../components/posts/PostsComponentDummy.tsx";
+import PostsComponentDummy from "../../components/posts/PostsComponentDummy.tsx";
 
 const PostsDummyPage = () => {
     return (
