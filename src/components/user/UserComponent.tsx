@@ -7,8 +7,12 @@ type UserPropsType = {
 
 const UserComponent: FC<UserPropsType> = ({user}) => {
     return (
-        <div>
-            {user.firstName} - {user.id}
+        <div className={
+            'bg-amber-100 border-2 border-amber-950 rounded-md p-3' +
+            ' flex flex-col gap-1 justify-center content-center'}>
+            <p className={'text-center'}>{user.firstName} {user.lastName} - {user.id}</p>
+            <p className={'text-center'}>{user.email}</p>
+            <p className={'text-center'}>Phone: {user.phone}</p>
         </div>
     );
 };
