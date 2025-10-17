@@ -12,7 +12,7 @@ const CarsComponent = () => {
     }, []);
 
     return (
-        <div>
+        <div className={'grid grid-cols-3 gap-4 p-5'}>
             {
                 cars.map((car: ICar) => <CarComponent key={car.id} car={car}/>)
             }

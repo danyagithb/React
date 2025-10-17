@@ -2,9 +2,9 @@ import CarsComponent from "../components/cars/CarsComponent.tsx";
 
 const CarsPage = () => {
     return (
-        <div>
+        <>
             <CarsComponent/>
-        </div>
+        </>
     );
 };
 
