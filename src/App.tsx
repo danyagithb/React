@@ -1,17 +1,11 @@
 import './App.css'
+import UsersComponent from "./components/UsersComponent.tsx";
 
 function App() {
+  console.log('app')
   return (
     <>
-      <ul>
-        <li>ksdgklkg</li>
-        <li>ksdgklkg</li>
-        <li>ksdgklkg</li>
-        <li>ksdgklkg</li>
-        <h1 className="text-3xl font-bold underline">
-          Hello world!
-        </h1>
-      </ul>
+      <UsersComponent/>
     </>
   )
 }
