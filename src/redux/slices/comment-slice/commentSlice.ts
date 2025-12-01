@@ -20,6 +20,8 @@ const loadComments = createAsyncThunk(
     }
 );
 
+//Асинронная функция, которая загружает комментарии с апи
+
 const initCommentSliceState: CommentSliceType = {comments: [], error: null};
 
 export const commentSlice = createSlice({

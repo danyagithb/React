@@ -17,11 +17,14 @@ const loadUsers = createAsyncThunk(
 
             return thunkAPI.fulfillWithValue(users);
         } catch (e) {
-            return thunkAPI.rejectWithValue(`some error: ${e}`)
+            return thunkAPI.rejectWithValue(`some error: ${e}`);
+            //В случае ошибки выдает текст в консоль
         }
 
     }
 );
+
+//Асинхронная функция для загрузки пользователей с апи
 
 export const userSlice = createSlice({
     name: 'userSlice',

@@ -14,3 +14,5 @@ export const store = configureStore({
 
 export const useAppDispatch = useDispatch.withTypes<typeof store.dispatch>();
 export const useAppSelector = useSelector.withTypes<ReturnType<typeof store.getState>>();
+
+//Кастомные хуки диспатч и селектор, которые сами типизируют информацию в store

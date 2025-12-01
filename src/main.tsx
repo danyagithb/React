@@ -10,3 +10,5 @@ createRoot(document.getElementById('root')!).render(
         <RouterProvider router={routes}/>
     </Provider>
 )
+
+//Добавил store и роутер провайдер

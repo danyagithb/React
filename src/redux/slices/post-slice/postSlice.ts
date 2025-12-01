@@ -21,6 +21,8 @@ const loadPosts = createAsyncThunk(
     }
 );
 
+//Асинхронная функция, которая загружает посты с апи
+
 export const postSlice = createSlice({
     name: 'postSlice',
     initialState: initPostSliceState,

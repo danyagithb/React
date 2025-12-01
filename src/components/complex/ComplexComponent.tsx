@@ -18,6 +18,7 @@ const ComplexComponent = () => {
         postStoreSlice: {posts},
         userStoreSlice: {users}
     } = useAppSelector(state => state);
+    //Вытаскиваем из store комментарии, посты и юзеров
 
     useEffect(() => {
         if(!users.length) {
@@ -29,6 +30,7 @@ const ComplexComponent = () => {
         if(!comments.length) {
             dispatch(commentsActions.loadComments());
         }
+        //Проверки: вдруг если не загрузились данные из store, самому их вытащить и загрузить
     }, []);
     return (
         <div>
@@ -36,6 +38,7 @@ const ComplexComponent = () => {
             <div>POSTS: {posts.map((post: IPost) => <PostComponent key={post.id} post={post}/>)}</div>
             <div>COMMENTS: {comments.map((comment: IComment) => <CommentComponent key={comment.id} comment={comment}/>)}</div>
         </div>
+        //Итерация и вывод юзеров, постов и комментариев
     );
 };
 
